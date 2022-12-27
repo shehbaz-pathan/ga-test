@@ -1,0 +1,12 @@
+name: test-ci
+on:
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: [self-hosted, local-ubuntu]
+    steps:
+     - name: creating test file
+       run : |
+         echo "This is a test file created by github action" > /tmp/testfile
